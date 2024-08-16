@@ -1,0 +1,5 @@
+let textoOriginal = [];
+
+function encriptar () {
+
+}

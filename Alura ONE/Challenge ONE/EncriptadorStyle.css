@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+    background-color: #E5E5E5;
+    height: 100dvh;
+    box-sizing: border-box;
+}
+
+h2 {
+    font-family: "Krona One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+::placeholder {
+    font-family: "Inter", sans-serif;
+    font-size: 32px;
+    font-weight: 400;
+}

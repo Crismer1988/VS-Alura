@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="styleSheet" href="EncriptadorStyle.css">
+</head>
+<body>
+    <h2>Encriptador de Texto</h2>
+    <textarea id="inputText" rows="4" cols="50" placeholder="Ingrese el texto aquí..."></textarea><br>
+    <button id="encryptBtn">Encriptar</button>
+    <button id="DesencryptBtn">Desencriptar</button>
+    <button id="CopyBtn">Copiar</button>
+    <button id="KeyBtn">Llave</button>
+    <h3>Texto Encriptado:</h3>
+    <p id="resultText"></p>
+
+    <script>
+        document.getElementById('encryptBtn').addEventListener('click', function() {
+            let input = document.getElementById('inputText').value;
+            let encryptedText = "";
+
+            for (let i = 0; i < input.length; i++) {
+                let charCode = input.charCodeAt(i);
+                encryptedText += String.fromCharCode(charCode + 1);
+            }
+
+            document.getElementById('resultText').innerText = encryptedText;
+        });
+    </script>
+</body>
+</html>
