@@ -1,33 +1,41 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="styleSheet" href="EncriptadorStyle.css">
+    <link rel="styleSheet" href="encriptadorStyle.css">
 </head>
 <body>
-    <h2>Encriptador de Texto</h2>
-    <textarea id="inputText" rows="4" cols="50" placeholder="Ingrese el texto aquí..."></textarea><br>
-    <button id="encryptBtn">Encriptar</button>
-    <button id="DesencryptBtn">Desencriptar</button>
-    <button id="CopyBtn">Copiar</button>
-    <button id="KeyBtn">Llave</button>
-    <h3>Texto Encriptado:</h3>
-    <p id="resultText"></p>
+    <header>
+        <img src="ChallengeAssets/logo.png" alt="Logo Alura">
+        <h2>Encriptador de Texto</h2>
+    </header>
 
-    <script>
-        document.getElementById('encryptBtn').addEventListener('click', function() {
-            let input = document.getElementById('inputText').value;
-            let encryptedText = "";
+    <main>
+        <div class="encryptArea">
+            <textarea id="inputText" rows="1" cols="25" placeholder="Ingrese el texto aquí..."></textarea><br>
+            <div class="encryptAreaBtn">
+                <button id="encryptBtn" class="encryptBtn">Encriptar</button>
+                <button id="decryptBtn" class="decryptBtn">Desencriptar</button>
+            </div>
+        </div>
 
-            for (let i = 0; i < input.length; i++) {
-                let charCode = input.charCodeAt(i);
-                encryptedText += String.fromCharCode(charCode + 1);
-            }
+        <div class="decryptArea">
+            <div class="decryptArea__assets">
+                <img id="decryptArea__img" src="ChallengeAssets/Muñeco.png" alt="Imagen de hombrecillo arrodillado mirando un diamante con una lupa">
+                <h3 id="decryptArea__alert">¡Ningún mensaje fue encontrado!</h3><br>
+                <p id="decryptArea__request">Ingresa el texto que deseas encriptar o desencriptar.</p><br>
+            </div>
+            <p id="resultText"></p>
+            <button id="copyBtn">Copiar</button>
+        </div>
 
-            document.getElementById('resultText').innerText = encryptedText;
-        });
-    </script>
+        <script rel="script" src="encriptador.js"></script>
+    </main>
+
+    <footer>
+        <p >Desarrollado con el apoyo de Alura Latam.</p>
+    </footer>
 </body>
 </html>

@@ -1,19 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Merienda:wght@300..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
 
 body {
     background-color: #E5E5E5;
     height: 100dvh;
-    box-sizing: border-box;
 }
 
-h2 {
-    font-family: "Krona One", sans-serif;
-    font-weight: 400;
-    font-style: normal;
+header {
+    display: flex; 
+    justify-content: flex-start;
+    padding: 1% 0% 1% 2%;
+    font-family:"Merienda", cursive;
+    font-weight: 600;
+    font-size: 30px;
+}
+
+main{
+    display: flex;
+    justify-content: space-between;
+    margin: 10% 10% 20% 10%;
+
 }
 
 ::placeholder {
     font-family: "Inter", sans-serif;
     font-size: 32px;
     font-weight: 400;
+    color: #0A3871;
+}
+
+textarea, #resultText {
+    background: transparent;
+    border: none;
+    resize: none;
+    font-family: "Architects Daughter", cursive;
+    font-size: 32px;
+    font-weight: 400;
+}
+
+.encryptArea {
+    display: flex; 
+    align-items: flex-start;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+.encryptAreaBtn {
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+button {
+    width: 328px;
+    height: 67px;
+    cursor: default;
+    border-radius: 24px;
+    border: 1px solid #0A3871;
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.encryptBtn {
+    background-color: #0A3871;
+    color: #E5E5E5;
+}
+
+.decryptBtn {
+    background-color: #D8DFE8;
+    color: #0A3871;
+}
+
+.decryptArea {
+    display: flex; 
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+footer {
+    background-color: #D8DFE8;
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    color: #000000;
+    text-align: center;
+    padding: 23.64px;
 }
